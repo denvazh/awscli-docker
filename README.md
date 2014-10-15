@@ -17,5 +17,5 @@ This repository has single `Dockerfile` to build container with command-line too
 # Usage
 
 ```
-docker run -it --rm denvazh/awscli /bin/bash
+docker run -it --rm denvazh/awscli-docker /bin/bash
 ```
