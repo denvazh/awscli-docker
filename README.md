@@ -4,7 +4,7 @@ This repository has single `Dockerfile` to build container with command-line too
 
 # Base Docker Image
 
-* [denvazh/awscli-docker](https://registry.hub.docker.com/u/denvazh/awscli-docker/)
+* [dockerfile/ubuntu](https://registry.hub.docker.com/u/dockerfile/ubuntu/)
 
 # Installation
 
