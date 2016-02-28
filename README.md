@@ -1,10 +1,10 @@
 # AwsCli Dockerfile
 
-This repository has single `Dockerfile` to build container with command-line tools for Amazon Web Services.
+This repository contains `Dockerfile` of command-line tools for Amazon Web Services for Docker's automated build based on lightweight [Alpine Linux docker image provided by gliderlabs](https://registry.hub.docker.com/u/gliderlabs/alpine/). 
 
 # Base Docker Image
 
-* [dockerfile/ubuntu](https://registry.hub.docker.com/u/dockerfile/ubuntu/)
+* [gliderlabs/alpine:3.3](https://registry.hub.docker.com/u/gliderlabs/alpine/)
 
 # Installation
 
@@ -19,13 +19,14 @@ This repository has single `Dockerfile` to build container with command-line too
 Use image to run container
 
 ```
-docker run -it --rm denvazh/awscli-docker /bin/bash
+docker run -it --rm denvazh/awscli-docker
 ```
 
 Provide AWS access credentials as environment variables
 
 ```
-docker run -it --rm --env AWS_ACCESS_KEY_ID=bsLLPPRrdrKfFucOqgRQ --env AWS_SECRET_ACCESS_KEY=fBUFlTuLebofPrAhAIkmfBOSEphtaOKxrweaWKNS denvazh/awscli-docker /bin/bash
+docker run -it --rm \
+--env AWS_ACCESS_KEY_ID=access_key \
+--env AWS_SECRET_ACCESS_KEY=secret_key \
+denvazh/awscli-docker
 ```
-
-> Note: AWS credentials above are not real and was randomly generated for the sake of sample
